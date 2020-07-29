@@ -1,4 +1,4 @@
-# STGCN-keras
+# STGCN-pytorch
 This is a Pytorch implementation of Spatio-Temporal Graph Convolutional Networks(STGCN) model from the paper "[Spatio-Temporal Graph Convolutional Networks: A Deep Learning Framework for Traffic Forecasting](https://arxiv.org/pdf/1709.04875.pdf)"
 
 > **Detailed analysis：[STGCN](https://github.com/Knowledge-Precipitation-Tribe/STGCN-keras/tree/master/ppt)**
@@ -10,7 +10,7 @@ This is a Pytorch implementation of Spatio-Temporal Graph Convolutional Networks
 ## Requirements:
 
 - python 3.6
-- pytorch 1.6
+- pytorch 1.3.1
 
 ## Usage
 

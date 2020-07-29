@@ -2,7 +2,7 @@
 '''
 # Name:         layer
 # Description:  
-# Author:       neu
+# Author:       super
 # Date:         2020/7/28
 '''
 
@@ -33,8 +33,7 @@ class TimeBlock(nn.Module):
 
     def forward(self, X):
         """
-        :param X: Input data of shape (batch_size, num_nodes, num_timesteps,
-        num_features=in_channels)
+        :param X: Input data of shape (batch_size, num_nodes, num_timesteps, num_features=in_channels)
         :return: Output data of shape (batch_size, num_nodes,
         num_timesteps_out, num_features_out=out_channels)
         """
@@ -57,10 +56,8 @@ class STGCNBlock(nn.Module):
     def __init__(self, in_channels, spatial_channels, out_channels,
                  num_nodes):
         """
-        :param in_channels: Number of input features at each node in each time
-        step.
-        :param spatial_channels: Number of output channels of the graph
-        convolutional, spatial sub-block.
+        :param in_channels: Number of input features at each node in each time step.
+        :param spatial_channels: Number of output channels of the graph convolutional, spatial sub-block.
         :param out_channels: Desired number of output features at each node in
         each time step.
         :param num_nodes: Number of nodes in the graph.
@@ -81,8 +78,7 @@ class STGCNBlock(nn.Module):
 
     def forward(self, X, A_hat):
         """
-        :param X: Input data of shape (batch_size, num_nodes, num_timesteps,
-        num_features=in_channels).
+        :param X: Input data of shape (batch_size, num_nodes, num_timesteps, num_features=in_channels).
         :param A_hat: Normalized adjacency matrix.
         :return: Output data of shape (batch_size, num_nodes,
         num_timesteps_out, num_features=out_channels).
@@ -100,8 +96,7 @@ class STGCN(nn.Module):
     """
     Spatio-temporal graph convolutional network as described in
     https://arxiv.org/abs/1709.04875v3 by Yu et al.
-    Input should have shape (batch_size, num_nodes, num_input_time_steps,
-    num_features).
+    Input should have shape (batch_size, num_nodes, num_input_time_steps, num_features).
     """
 
     def __init__(self, num_nodes, num_features, num_timesteps_input,
@@ -125,8 +120,7 @@ class STGCN(nn.Module):
 
     def forward(self, A_hat, X):
         """
-        :param X: Input data of shape (batch_size, num_nodes, num_timesteps,
-        num_features=in_channels).
+        :param X: Input data of shape (batch_size, num_nodes, num_timesteps, num_features=in_channels).
         :param A_hat: Normalized adjacency matrix.
         """
         out1 = self.block1(X, A_hat)

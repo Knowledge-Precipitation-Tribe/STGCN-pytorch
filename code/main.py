@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-#
 '''
-# Name:         n麦
+# Name:         super
 # Description:  
 # Author:       neu
 # Date:         2020/7/28
